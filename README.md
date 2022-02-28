@@ -2,10 +2,6 @@
 
 Chrome DevTools makes it possible to test service workers on localhost in development. Simply click the Application tab, then select Service Workers from the menu on the left.
 
-- You should add your idb.js file to the public/js/ directory of your application.
-
-- You should add your service worker to the root of the public/ directory of your application.
-
 ## Offline functionality
 
 feature/offline-functionality

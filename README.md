@@ -4,22 +4,9 @@ Chrome DevTools makes it possible to test service workers on localhost in develo
 
 ## Offline functionality
 
-feature/offline-functionality
-
-Review Module 18: NoSQL, Lesson 4: Add Offline Persistence with IndexedDB as a refresher on how to add this to your application.
-- Add notes here
-
 Add a service worker
 Review Module 19: Progressive Web Applications (PWA), Lesson 4: Using Service Workers as a refresher on how to add this to your application.
 - Add notes here
-
-Once you’ve updated the existing budget tracker, it should provide the following functionality:
-
-- The ability to enter deposits offline.
-
-- The ability to enter expenses offline.
-
-- Offline entries should be added to the tracker when the application is brought back online.
 
 ## Web Manifest
 

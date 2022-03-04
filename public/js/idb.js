@@ -28,3 +28,15 @@ request.onerror = function(event) {
     // log error here
     console.log(event.target.errorCode);
 };
+
+// This function will execute if we attempt to submit a new transaction and there's not internet connection
+function saveRecord(record) {
+    // Open new transaction with the db with read and write permissions
+    const transaction = db.transaction(['new_transaction'], 'readwrite');
+
+    // Access the object store for 'new_transaction'
+    const transactionObjectStore = transaction.objectStore('new_transaction');
+
+    // Add record to your store with add method
+    transactionObjectStore.add(record);
+}

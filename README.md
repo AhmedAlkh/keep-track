@@ -1,9 +1,17 @@
-# keep-track
+# Keep Track
 
-Chrome DevTools makes it possible to test service workers on localhost in development. Simply click the Application tab, then select Service Workers from the menu on the left.
+## Link to application
 
-## Deployment to Heroku Using MongoDB Atlas
+## Description
 
-Finally, the budget tracker has a server and uses MongoDB as its database, so you’ll need to deploy this application to Heroku using MongoDB Atlas. 
+Keep Track is a budget tracker application. Keep track of your spending and saving in this easy to use app. Add or subtract funds and see your transactions displayed in order(most recent first) as well as on a detailed graph. The app works offline! Keep track of your transactions even without internet access. As soon as you're online, the app will update!
 
-To review this process, look at Module 18: NoSQL, Lesson 5: Add Mongoose Validation, specifically 18.5.5: Deploy to Heroku.
+## Screenshot
+![Keep Track](https://user-images.githubusercontent.com/90983346/156837429-4b9c292a-1207-41a3-a525-31066a892dce.png)
+
+## Questions
+
+GitHub: https://github.com/AhmedAlkh
+
+For any additional questions or information, please contact me.
+[alkhatib_ahmed1995@hotmail.com](mailto:alkhatib_ahmed1995@hotmail.com)

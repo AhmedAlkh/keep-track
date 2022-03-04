@@ -20,7 +20,7 @@ request.onsuccess = function(event) {
     // Check if app is online, if yes run uploadTransaction() function to send all local db data to api
     if(navigator.onLine) {
         // This havn't been created yet
-        // uploadTransaction();
+        uploadTransaction();
     }
 };
 
@@ -56,7 +56,7 @@ function uploadTransaction() {
     getAll.onsuccess = function() {
         // if there was data in IDB's store, send it to the api server
         if (getAll.result.length > 0) {
-            fetch('/api/transactions', {
+            fetch('/api/transaction', {
                 method: 'POST',
                 body: JSON.stringify(getAll.result),
                 headers: {

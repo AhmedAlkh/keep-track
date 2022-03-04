@@ -2,36 +2,6 @@
 
 Chrome DevTools makes it possible to test service workers on localhost in development. Simply click the Application tab, then select Service Workers from the menu on the left.
 
-## Offline functionality
-
-Add a service worker
-Review Module 19: Progressive Web Applications (PWA), Lesson 4: Using Service Workers as a refresher on how to add this to your application.
-- Add notes here
-
-## Web Manifest
-
-feature/manifest
-
-Because this will be a mobile-first application, you’ll also need to add a web manifest to your application with the app’s metadata, to let users’ devices know what they’re installing and how the app should look on the home screen.
-
-Review Module 19: Progressive Web Applications (PWA), Lesson 5: Convert the App to a PWA as a refresher on web manifests.
-
-This manifest.json file for this project will contain the following properties:
-
-- name
-
-- short_name
-
-- icons
-
-- theme_color
-
-- background_color
-
-- start_url
-
-- display
-
 ## Deployment to Heroku Using MongoDB Atlas
 
 Finally, the budget tracker has a server and uses MongoDB as its database, so you’ll need to deploy this application to Heroku using MongoDB Atlas. 

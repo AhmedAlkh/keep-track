@@ -40,3 +40,47 @@ function saveRecord(record) {
     // Add record to your store with add method
     transactionObjectStore.add(record);
 }
+
+// Function that will handle all data from new_transaction object store in IDB and POST it to the server.
+function uploadTransaction() {
+    // Open transaction on db
+    const transaction = db.transaction(['new_transaction'], 'readwrite');
+
+    // Access object store
+    const transactionObjectStore = transaction.objectStore('new_transaction');
+
+    // Get all records from store and set to a variable
+    const getAll = transactionObjectStore.getAll();
+
+    // Upon successful .getAll() execution, run this function
+    getAll.onsuccess = function() {
+        // if there was data in IDB's store, send it to the api server
+        if (getAll.result.length > 0) {
+            fetch('/api/transactions', {
+                method: 'POST',
+                body: JSON.stringify(getAll.result),
+                headers: {
+                    Accept: 'application/json, text/plain, */*',
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => response.json())
+            .then(serverResponse => {
+                if (serverResponse.message) {
+                    throw new Error(serverResponse);
+                }
+                // Open one more transaction
+                const transaction = db.transaction(['new_transaction'], 'readwrite');
+                // Access the new_transaction object store
+                const transactionObjectStore = transaction.objectStore('new_transaction');
+                // Clear all items in your store
+                transactionObjectStore.clear();
+
+                alert('All saved transactions have been submitted!');
+            })
+            .catch(err => {
+                console.log(err);
+            });
+        }
+    };
+}
